@@ -6,7 +6,25 @@
         xmlns:local="clr-namespace:WPFMultiplePanels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
+        <StackPanel Grid.Column="0" Margin="10,10,10,10">
+            <Label>This is the left column</Label>
+            <TextBox Margin="0,10,0,0" />
+            <Button Margin="0,10">Click me</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="0,10,10,10">
+            <Label>This is the right column</Label>
+            <CheckBox Margin="0,10,0, 10">Check me (if you even want to)</CheckBox>
+            <RadioButton GroupName="options">Option 1</RadioButton>
+            <RadioButton GroupName="options">Option 2</RadioButton>
+            <RadioButton GroupName="options">Option 3</RadioButton>
+        </StackPanel>
     </Grid>
+    
 </Window>
